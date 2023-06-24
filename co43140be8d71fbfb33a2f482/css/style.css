@@ -1,0 +1,369 @@
+@import url('about.css');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kalam', cursive;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    cursor: pointer;
+}
+
+/* 
+    =========== 
+    Typogrhaphy 
+    ============ 
+*/
+
+.header,
+.intro {
+    display: flex;
+}
+
+.header {
+    grid-gap: 10px;
+    padding: 1.2em;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header>h2 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 108.2%;
+    margin-right: auto;
+}
+
+/* Icon */
+.fa-solid {
+    font-size: 1.5625rem;
+    color: #000;
+}
+
+.logo {
+    width: 30px;
+}
+
+/* Links  */
+
+.link {
+    background-color: lightgrey;
+    opacity: 0.9;
+    height: 90px;
+    width: 90px;
+    flex-direction: column;
+    gap: 3px;
+    display: none;
+}
+
+.links {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-left: 1.875em;
+    border-radius: 250px;
+}
+
+.home {
+    padding-top: 0.625em;
+    padding-bottom: 0.25em;
+}
+
+.about {
+    padding-top: 0;
+}
+
+.home:hover,
+.about:hover {
+    text-decoration: 2px solid #000 underline;
+}
+
+/* 
+    =========== 
+    Layout
+    ============ 
+*/
+
+.article {
+    background-image: url('../images/akatsuki.png');
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    height: 300px;
+}
+
+
+.intro {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 1.25em;
+    padding-top: 4em;
+}
+
+.article---sub-heading,
+.about---title,
+.about---section-title {
+    font-weight: 700;
+}
+
+.article---sub-heading {
+    font-size: 2rem;
+}
+
+.article---text {
+    font-size: 0.875rem;
+}
+
+/* 
+    =========== 
+    Grouped classes
+    ============ 
+*/
+
+.article---date,
+.article---text,
+.blog---date,
+.blog---info,
+.about---info,
+.about---section-text {
+    font-weight: 400;
+}
+
+.article---date,
+.blog---date {
+    margin-bottom: 0.43em;
+}
+
+.article---sub-heading,
+.blog---title {
+    margin-top: 0.68em;
+    margin-bottom: 0;
+}
+
+.article---text,
+.blog---info {
+    margin-top: 0.625em;
+}
+
+.article---date,
+.article---text,
+.links,
+
+.about---section-text {
+    line-height: 20px;
+}
+
+.article---date,
+.blog---footer,
+.copyright {
+    font-size: 0.75rem;
+}
+
+.article---sub-heading,
+.blog---footer,
+.about---title {
+    letter-spacing: -0.03em;
+}
+
+.article---sub-heading,
+.blog---title,
+.blog---footer,
+.about---title {
+    line-height: 108.2%;
+}
+
+.blog---info,
+.copyright {
+    line-height: 125%;
+}
+
+/* 
+    =========== 
+    Layout 2
+    ============ 
+*/
+
+.section,
+.section-two {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.blogs {
+    margin-top: 3.125em;
+}
+
+.blog---image {
+    width: 374px;
+    height: 232px;
+    border-radius: 3px;
+}
+
+.blog---date {
+    font-size: 0.9375rem;
+    line-height: 18px;
+}
+
+.blog---title {
+    font-size: 1.5rem;
+}
+
+.blog---info,
+.about---section-text {
+    font-size: 1rem;
+
+}
+
+/* Layout 2 */
+.section-two{
+    margin: 2.8125em 0em;
+} 
+
+/* A text that works as btn when it shows the rest of the content */
+.view-more {
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 18px;
+    text-align: center;
+    text-decoration-line: underline;
+    margin: 22px 0;
+}
+
+/* Hidden class for toggle */
+.hidden {
+    display: none;
+}
+
+/* 
+    =========== 
+    MEDIA QUERIES
+    ============ 
+*/
+
+/* Larger screen to stop line breaks colliding with smaller screens */
+@media(max-width: 1020px) {
+    .br {
+        display: none;
+    }
+}
+
+
+/* Medium devices */
+@media (min-width: 795px) {
+
+    .fa-solid {
+        display: none;
+    }
+
+    .link {
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 0px;
+        height: 0px;
+        margin-right: 10em;
+    }
+
+    .about {
+        margin-top: 0.25em;
+    }
+
+    .intro {
+        padding-top: 15em;
+        padding-left: 3em;
+    }
+
+    .article {
+        height: 400px;
+    }
+
+    .section,
+    .section-two {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .fa-solid {
+        display: none;
+    }
+
+    .links {
+        margin-left: 1.875em;
+    }
+
+    .article {
+        height: 100%;
+    }
+
+    .intro {
+        padding-top: 24em;
+        padding-left: 3em;
+    }
+
+    header>h2 {
+        font-size: 1.312rem;
+    }
+
+    .section,
+    .section-two {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .article---date,
+    .article---text {
+        font-size: 1rem;
+    }
+
+    .article---sub-heading {
+        font-size: 2.5rem;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* 
+    =========== 
+     Footer
+    ============ 
+*/
+
+footer {
+    background: #202020;
+    text-align: center;
+    color: whitesmoke;
+    padding: 0.375em 0.1875em;
+}
+
+.blog---footer {
+    margin-bottom: 0;
+}
+
+.copyright {
+    font-weight: 400;
+    margin-top: 3px;
+}

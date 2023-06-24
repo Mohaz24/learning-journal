@@ -1,0 +1,101 @@
+@import url("style.css");
+
+/* 
+    ===============
+    All the content
+    ===============
+*/
+
+.container {
+    background: #fafafa;
+    padding: 1.875em;
+}
+
+/* 
+    ===============
+    Article content
+    ===============
+*/
+.about-article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin: 0em 3.125em;
+}
+
+/*  Typogrhaphy  */
+.about---title {
+    font-size: 2.25rem;
+    margin-bottom: 0em;
+}
+
+.about---info {
+    margin-top: 0.6875em;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* 
+    ==========
+    Layout 1
+    ==========
+*/
+.about---section-one {
+    padding-top: 2em;
+    padding-left: 3em;
+}
+
+.about---section-title {
+    font-size: 1.25rem;
+    line-height: 25px;
+    margin-bottom: 0em;
+}
+
+.about---section-text {
+    margin-top: 0.9375em;
+}
+
+
+/* 
+    =========== 
+    MEDIA QUERIES
+    ============ 
+*/
+
+/* All two screens combined apart from mobile screen sizes */
+@media (min-width: 914px) {
+    .about-article {
+        grid-template-columns: 6.25em 100px 6.25em 100px / 1fr 1fr 1fr;
+        grid-gap: 0 20px;
+    }
+
+    .about---title {
+        grid-area: 2 / 2;
+        grid-row: 2 / -1;
+    }
+
+    .about---info {
+        grid-row: 2;
+    }
+
+    .profile-picture {
+        grid-area: 1 / 1;
+        grid-row: 1 / 3;
+    }
+
+    .about---section-one {
+        padding-top: 4em;
+        padding-left: 6em;
+    }
+
+}
+
+.recent-post {
+    font-size: 1.5rem;
+    padding-top: 2.4em;
+    text-align: center;
+}
